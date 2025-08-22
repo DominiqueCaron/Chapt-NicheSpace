@@ -17,7 +17,7 @@ turtletrees <- read.nexus("data/raw/phylogeny/turtles/sampleFromPosterior.100.tr
 traits <- read.csv("data/cleaned/SpeciesTraitsFull.csv", row.names = 1, stringsAsFactors = T)
 
 # Correct tip labels
-label_key <- read.csv("../phylogeny/vertlife_gbif_key.csv", row.names = 1)
+label_key <- read.csv("data/raw/phylogeny/vertlife_gbif_key.csv", row.names = 1)
 turtle_lab <- turtletrees[[1]]$tip.label
 turtle_lab <- sub("_[^_]+$", "", turtle_lab)
 turtle_lab <- gsub("_", " ", turtle_lab)
